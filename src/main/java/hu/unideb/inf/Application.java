@@ -18,8 +18,11 @@ public class Application {
         customer.setFirstName("Dennys");
         customer.setLastName("Fredericci");
 
+        Animal ellyElephant = new Animal("Elly", 9, Animal.GenderType.FEMALE);
+
         entityManager.getTransaction().begin();
         entityManager.persist(customer);
+        entityManager.persist(ellyElephant);
         entityManager.getTransaction().commit();
 
         System.out.println("Open your browser and navigate to http://localhost:8082/");
